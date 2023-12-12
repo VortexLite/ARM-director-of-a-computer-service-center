@@ -1,0 +1,240 @@
+﻿<UserControl x:Class="Laba7DB2.MVM.View.ControlsWorker"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Laba7DB2.MVM.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <StackPanel Loaded="HideAll_Loaded">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Menu Style="{StaticResource ClientMenu}" 
+                  Grid.ColumnSpan="2"
+                  Margin="0 15 0 30">
+                <MenuItem Header="Додавання працівників" Style="{StaticResource ClientMenuItem}" 
+                          Click="ADD_Worker"/>
+                <MenuItem Header="Видалення працівників" Style="{StaticResource ClientMenuItem}" 
+                          Click="DeleteWorker_Click"/>
+            </Menu>
+
+            <!--Перший блок-->
+            <Label Content="Ім'я"
+                   Style="{StaticResource TextAddWorker}"
+                   Grid.Row="2"
+                   Name="NameLabelWorker"
+                   Margin="200,0,0,0"
+                   Visibility="Collapsed"/>
+
+            <TextBox
+                Name="NameWorker"
+                Grid.Column="1"
+                Grid.Row="2"
+                Style="{StaticResource TextBoxAddWorker}"
+                Margin="360,0,195,0"
+                Visibility="Collapsed"/>
+
+            <Line Grid.Row="2" 
+                  Grid.Column="1"
+                  Margin="0 35 0 0"
+                  Style="{StaticResource LinContol}"
+                  Name="NameLineWorker"
+                  Visibility="Collapsed"
+                />
+
+            <Label Content="Прізвище"
+                   Style="{StaticResource TextAddWorker}"
+                   Grid.Row="3"
+                   Name="SurnmaeLabelWorker"
+                   Visibility="Collapsed"
+                   Margin="200,0,0,0"
+                   />
+
+            <TextBox
+                Name="SurnameWorker"
+                Grid.Column="1"
+                Grid.Row="3"
+                Style="{StaticResource TextBoxAddWorker}"
+                Visibility="Collapsed"
+                Margin="360,0,195,0"
+                />
+
+            <Line Grid.Row="3" 
+                  Grid.Column="1"
+                  Margin="0 35 0 0"
+                  Style="{StaticResource LinContol}"
+                  Name="SurnameLineWorker"
+                  Visibility="Collapsed"
+                />
+
+            <Label Content="Побатькові"
+                   Style="{StaticResource TextAddWorker}"
+                   Grid.Row="4"
+                   Name="MiddleNameLabelWorker"
+                   Visibility="Collapsed"
+                   Margin="200,0,0,0"
+                   />
+
+            <TextBox
+                Name="MiddleNameWorker"
+                Grid.Column="1"
+                Grid.Row="4"
+                Style="{StaticResource TextBoxAddWorker}"
+                Visibility="Collapsed"
+                Margin="360,0,195,0"
+                />
+
+            <Line Grid.Row="4" 
+                  Grid.Column="1"
+                  Margin="0 35 0 0"
+                  Style="{StaticResource LinContol}"
+                  Name="MiddleNameLineWorker"
+                  Visibility="Collapsed"
+                />
+
+            <Label Content="Email"
+                   Style="{StaticResource TextAddWorker}"
+                   Grid.Row="5"
+                   Name="EmailLabelWorker"
+                   Visibility="Collapsed"
+                   Margin="200,0,0,0"
+                   />
+
+            <TextBox
+                Name="EmailWorker"
+                Grid.Column="1"
+                Grid.Row="5"
+                Style="{StaticResource TextBoxAddWorker}"
+                Visibility="Collapsed"
+                Margin="360,0,195,0"
+                />
+
+            <Line Grid.Row="5" 
+                  Grid.Column="1"
+                  Margin="0 35 0 0"
+                  Style="{StaticResource LinContol}"
+                  Name="EmailLineWorker"
+                  Visibility="Collapsed"
+                />
+
+            <Label Content="Телефон"
+                   Style="{StaticResource TextAddWorker}"
+                   Grid.Row="6"
+                   Name="PhoneLabelWorker"
+                   Visibility="Collapsed"
+                   Margin="200,0,0,0"
+                   />
+            <TextBox
+                Name="PhoneWorker"
+                Grid.Column="1"
+                Grid.Row="6"
+                Style="{StaticResource TextBoxAddWorker}"
+                Visibility="Collapsed"
+                Margin="360,0,195,0"
+                />
+
+            <Line Grid.Row="6" 
+                  Grid.Column="1"
+                  Margin="0 35 0 0"
+                  Style="{StaticResource LinContol}"
+                  Name="PhoneLineWorker"
+                  Visibility="Collapsed"
+                />
+
+            <Label Content="Дата народження"
+                   Style="{StaticResource TextAddWorker}"
+                   Grid.Row="7"
+                   Name="DateBithLabelWorker"
+                   Visibility="Collapsed"
+                   Margin="200,0,0,0"
+                   />
+            <TextBox
+                Name="DataBirthWorker"
+                Grid.Column="1"
+                Grid.Row="7"
+                Style="{StaticResource TextBoxAddWorker}"
+                Visibility="Collapsed"
+                Margin="360,0,195,0"
+                />
+
+            <Line Grid.Row="7" 
+                  Grid.Column="1"
+                  Margin="0 35 0 0"
+                  Style="{StaticResource LinContol}"
+                  Name="DataBirthWorkerLineWorker"
+                  Visibility="Collapsed"
+                />
+
+            <Label Content="Дата"
+                   Style="{StaticResource TextAddWorker}"
+                   Grid.Row="8"
+                   Visibility="Collapsed"
+                   Margin="240,-8,0,0"
+                   />
+            <Label Content="працевлаштування"
+                   Style="{StaticResource TextAddWorker}"
+                   Grid.Row="8"
+                   Visibility="Collapsed"
+                   Margin="200,5,0,0"
+                   />
+
+            <TextBox
+                Name="DataEmploymentWorker"
+                Grid.Row="8"
+                Style="{StaticResource TextBoxAddWorker}"
+                Visibility="Collapsed"
+                Margin="360,0,195,0"
+                />
+
+            <Line Grid.Row="8" 
+                  Grid.Column="1"
+                  Margin="0 35 0 0"
+                  Style="{StaticResource LinContol}"
+                  Visibility="Collapsed"
+                />
+            <Button
+                Content="Додати"
+                Grid.ColumnSpan="2"
+                Grid.Row="9"
+                Margin="0 70 0 0"
+                Name="ButtonAddWorker"
+                Style="{StaticResource GradientButton}" 
+                Click="ButtonAddWorker_Click"
+                Visibility="Collapsed"/>
+
+            <ComboBox
+                Grid.Row="1"
+                Grid.ColumnSpan="2"
+                Width="300"
+                Name="DeleteComboboxWorker"
+                Visibility="Collapsed">
+
+            </ComboBox>
+
+            <Button
+                Content="Видалити"
+                Grid.ColumnSpan="2"
+                Grid.Row="2"
+                Margin="0 20 0 0"
+                Style="{StaticResource GradientButton}"
+                Name="DeleteButtonWorker" 
+                Click="DeleteButtonWorker_Click"
+                Visibility="Collapsed"
+                />
+            
+
+        </Grid>
+    </StackPanel>
+</UserControl>

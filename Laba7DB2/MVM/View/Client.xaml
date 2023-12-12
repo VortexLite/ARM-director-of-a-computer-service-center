@@ -1,0 +1,209 @@
+﻿<UserControl x:Class="Laba7DB2.MVM.View.Client"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Laba7DB2.MVM.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <StackPanel Loaded="HideAll_Loaded">
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Menu Style="{StaticResource ClientMenu}" 
+                  Grid.ColumnSpan="2"
+                  Margin="0 15 0 30"
+                  Visibility="Visible">
+                <MenuItem Header="Додавання клієнтів" Style="{StaticResource ClientMenuItem}" Click="ADD_Client_Click"
+                          />
+                <MenuItem Header="Видалення клієнтів" Style="{StaticResource ClientMenuItem}" Click="DeleteClient_Click"/>
+            </Menu>
+            <Label Content="Ім'я"
+                   Style="{StaticResource TextAddWorker}"
+                   Grid.Row="2"
+                   Name="NameLabelClient"
+                   Margin="200,0,0,0"
+                   Visibility="Collapsed"/>
+            <TextBox
+                Name="NameClient"
+                Grid.Row="2"
+                Style="{StaticResource TextBoxAddWorker}"
+                Visibility="Collapsed" 
+                Margin="310,0,220,0"
+                />
+
+            <Line Grid.Row="2" 
+                  Grid.Column="1"
+                  Margin="0 35 0 0"
+                  Style="{StaticResource LinContol}"
+                  Name="NameLineClient"
+                  Visibility="Collapsed"
+                />
+            
+
+            <Label Content="Прізвище"
+                   Style="{StaticResource TextAddWorker}"
+                   Grid.Row="3"
+                   Name="SurnmaeLabelClient"
+                   Margin="200,0,0,0"
+                   Visibility="Collapsed"/>
+            
+            <TextBox
+                Name="SurnameClient"
+                Grid.Column="1"
+                Grid.Row="3"
+                Style="{StaticResource TextBoxAddWorker}"
+                Visibility="Collapsed"
+                Margin="310,0,220,0"
+                />
+            
+            <Line Grid.Row="3" 
+                  Grid.Column="1"
+                  Margin="0 35 0 0"
+                  Style="{StaticResource LinContol}"
+                  Name="SurnameLineClient"
+                  Visibility="Collapsed"
+                />
+
+            <Label Content="Побатькові"
+                   Style="{StaticResource TextAddWorker}"
+                   Grid.Row="4"
+                   Name="MiddleNameLabelClient"
+                   Visibility="Collapsed"
+                   Margin="200,0,0,0"
+                   />
+            
+            <TextBox
+                Name="MiddleNameClient"
+                Grid.Column="1"
+                Grid.Row="4"
+                Style="{StaticResource TextBoxAddWorker}"
+                Visibility="Collapsed"
+                Margin="310,0,220,0"
+                />
+            
+            <Line Grid.Row="4" 
+                  Grid.Column="1"
+                  Margin="0 35 0 0"
+                  Style="{StaticResource LinContol}"
+                  Name="MiddleNameLineClient"
+                  Visibility="Collapsed"
+                />
+
+            <Label Content="Email"
+                   Style="{StaticResource TextAddWorker}"
+                   Grid.Row="5"
+                   Name="EmailLabelClient"
+                   Visibility="Collapsed"
+                   Margin="200,0,0,0"
+                   />
+            
+            <TextBox
+                Name="EmailClient"
+                Grid.Column="1"
+                Grid.Row="5"
+                Style="{StaticResource TextBoxAddWorker}"
+                Visibility="Collapsed"
+                Margin="310,0,220,0"
+                />
+            
+            <Line Grid.Row="5" 
+                  Grid.Column="1"
+                  Margin="0 35 0 0"
+                  Style="{StaticResource LinContol}"
+                  Name="EmailLineClient"
+                  Visibility="Collapsed"
+                />
+
+            <Label Content="Телефон"
+                   Style="{StaticResource TextAddWorker}"
+                   Grid.Row="6"
+                   Name="PhoneLabelClient"
+                   Visibility="Collapsed"
+                   Margin="200,0,0,0"
+                   />
+            <TextBox
+                Name="PhoneClient"
+                Grid.Column="1"
+                Grid.Row="6"
+                Style="{StaticResource TextBoxAddWorker}"
+                Visibility="Collapsed"
+                Margin="310,0,220,0"
+                />
+            
+            <Line Grid.Row="6" 
+                  Grid.Column="1"
+                  Margin="0 35 0 0"
+                  Style="{StaticResource LinContol}"
+                  Name="PhoneLineClient"
+                  Visibility="Collapsed"
+                />
+
+            <Label Content="Адреса"
+                   Style="{StaticResource TextAddWorker}"
+                   Grid.Row="7"
+                   Name="AdressLabelClient"
+                   Visibility="Collapsed"
+                   Margin="200,0,0,0"
+                   />
+            <TextBox
+                Name="AdressClient"
+                Grid.Column="1"
+                Grid.Row="7"
+                Style="{StaticResource TextBoxAddWorker}"
+                Visibility="Collapsed"
+                Margin="310,0,220,0"
+                />
+            
+            <Line Grid.Row="7" 
+                  Grid.Column="1"
+                  Margin="0 35 0 0"
+                  Style="{StaticResource LinContol}"
+                  Name="AdressLineClient"
+                  Visibility="Collapsed"
+                />
+
+            <Button
+                Content="Додати"
+                Grid.ColumnSpan="2"
+                Grid.Row="9"
+                Margin="0 70 0 0"
+                Name="ButtonAddWClient"
+                Style="{StaticResource GradientButton}" 
+                Click="ButtonAddClient_Click"
+                Visibility="Collapsed"/>
+
+            <ComboBox
+                Grid.Row="1"
+                Grid.ColumnSpan="2"
+                Width="300"
+                Name="DeleteComboboxClient"
+                Visibility="Visible">
+
+            </ComboBox>
+
+            <Button
+                Content="Видалити"
+                Grid.ColumnSpan="2"
+                Grid.Row="2"
+                Margin="0 20 0 0"
+                Style="{StaticResource GradientButton}"
+                Name="DeleteButtonClient" 
+                Click="DeleteButtonClient_Click"
+                Visibility="Visible"
+                />
+
+        </Grid>
+    </StackPanel>
+</UserControl>

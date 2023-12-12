@@ -1,0 +1,1 @@
+Provider=SQLOLEDB.1;Password=qwerty;Persist Security Info=True;User ID=sa;Initial Catalog=ComputerServiceCenter;Data Source=MSI

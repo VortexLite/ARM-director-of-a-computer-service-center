@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ComputerServiceCenterConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ComputerServiceCenterConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Laba7DB2.Properties.Settings.GlobalReference.Default.ComputerServiceCenterConnectionString1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ClientOrdersViewTableAdapter" GeneratorDataComponentClassName="ClientOrdersViewTableAdapter" Name="ClientOrdersView" UserDataComponentName="ClientOrdersViewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ComputerServiceCenterConnectionString1 (Settings)" DbObjectName="ComputerServiceCenter.dbo.ClientOrdersView" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID_Client, Surname_Client, Name_Client, Adress_Client, Email_Client, Phone_Client, Date_Orders, Description_Orders FROM dbo.ClientOrdersView</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID_Client" DataSetColumn="ID_Client" />
+              <Mapping SourceColumn="Surname_Client" DataSetColumn="Surname_Client" />
+              <Mapping SourceColumn="Name_Client" DataSetColumn="Name_Client" />
+              <Mapping SourceColumn="Adress_Client" DataSetColumn="Adress_Client" />
+              <Mapping SourceColumn="Email_Client" DataSetColumn="Email_Client" />
+              <Mapping SourceColumn="Phone_Client" DataSetColumn="Phone_Client" />
+              <Mapping SourceColumn="Date_Orders" DataSetColumn="Date_Orders" />
+              <Mapping SourceColumn="Description_Orders" DataSetColumn="Description_Orders" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="DataSet1" msprop:Generator_DataSetName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ClientOrdersView" msprop:Generator_RowEvHandlerName="ClientOrdersViewRowChangeEventHandler" msprop:Generator_RowDeletedName="ClientOrdersViewRowDeleted" msprop:Generator_RowDeletingName="ClientOrdersViewRowDeleting" msprop:Generator_RowEvArgName="ClientOrdersViewRowChangeEvent" msprop:Generator_TablePropName="ClientOrdersView" msprop:Generator_RowChangedName="ClientOrdersViewRowChanged" msprop:Generator_RowChangingName="ClientOrdersViewRowChanging" msprop:Generator_TableClassName="ClientOrdersViewDataTable" msprop:Generator_RowClassName="ClientOrdersViewRow" msprop:Generator_TableVarName="tableClientOrdersView" msprop:Generator_UserTableName="ClientOrdersView">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_Client" msprop:Generator_ColumnPropNameInRow="ID_Client" msprop:Generator_ColumnPropNameInTable="ID_ClientColumn" msprop:Generator_ColumnVarNameInTable="columnID_Client" msprop:Generator_UserColumnName="ID_Client">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Surname_Client" msprop:Generator_ColumnPropNameInRow="Surname_Client" msprop:Generator_ColumnPropNameInTable="Surname_ClientColumn" msprop:Generator_ColumnVarNameInTable="columnSurname_Client" msprop:Generator_UserColumnName="Surname_Client">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Name_Client" msprop:Generator_ColumnPropNameInRow="Name_Client" msprop:Generator_ColumnPropNameInTable="Name_ClientColumn" msprop:Generator_ColumnVarNameInTable="columnName_Client" msprop:Generator_UserColumnName="Name_Client">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Adress_Client" msprop:Generator_ColumnPropNameInRow="Adress_Client" msprop:Generator_ColumnPropNameInTable="Adress_ClientColumn" msprop:Generator_ColumnVarNameInTable="columnAdress_Client" msprop:Generator_UserColumnName="Adress_Client">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Email_Client" msprop:Generator_ColumnPropNameInRow="Email_Client" msprop:Generator_ColumnPropNameInTable="Email_ClientColumn" msprop:Generator_ColumnVarNameInTable="columnEmail_Client" msprop:Generator_UserColumnName="Email_Client">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Phone_Client" msprop:Generator_ColumnPropNameInRow="Phone_Client" msprop:Generator_ColumnPropNameInTable="Phone_ClientColumn" msprop:Generator_ColumnVarNameInTable="columnPhone_Client" msprop:Generator_UserColumnName="Phone_Client">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Date_Orders" msprop:Generator_ColumnPropNameInRow="Date_Orders" msprop:Generator_ColumnPropNameInTable="Date_OrdersColumn" msprop:Generator_ColumnVarNameInTable="columnDate_Orders" msprop:Generator_UserColumnName="Date_Orders" type="xs:dateTime" />
+              <xs:element name="Description_Orders" msprop:Generator_ColumnPropNameInRow="Description_Orders" msprop:Generator_ColumnPropNameInTable="Description_OrdersColumn" msprop:Generator_ColumnVarNameInTable="columnDescription_Orders" msprop:Generator_UserColumnName="Description_Orders">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ClientOrdersView" />
+      <xs:field xpath="mstns:ID_Client" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

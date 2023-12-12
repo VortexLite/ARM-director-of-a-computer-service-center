@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet3" targetNamespace="http://tempuri.org/DataSet3.xsd" xmlns:mstns="http://tempuri.org/DataSet3.xsd" xmlns="http://tempuri.org/DataSet3.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ComputerServiceCenterConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ComputerServiceCenterConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Laba7DB2.Properties.Settings.GlobalReference.Default.ComputerServiceCenterConnectionString1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SparePartsViewTableAdapter" GeneratorDataComponentClassName="SparePartsViewTableAdapter" Name="SparePartsView" UserDataComponentName="SparePartsViewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ComputerServiceCenterConnectionString1 (Settings)" DbObjectName="ComputerServiceCenter.dbo.SparePartsView" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID_SpareParts, TypeSpareParts, Name_SpareParts, Description_SpareParts, Price_SpareParts FROM dbo.SparePartsView</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID_SpareParts" DataSetColumn="ID_SpareParts" />
+              <Mapping SourceColumn="TypeSpareParts" DataSetColumn="TypeSpareParts" />
+              <Mapping SourceColumn="Name_SpareParts" DataSetColumn="Name_SpareParts" />
+              <Mapping SourceColumn="Description_SpareParts" DataSetColumn="Description_SpareParts" />
+              <Mapping SourceColumn="Price_SpareParts" DataSetColumn="Price_SpareParts" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet3" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="DataSet3" msprop:Generator_DataSetName="DataSet3">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SparePartsView" msprop:Generator_RowEvHandlerName="SparePartsViewRowChangeEventHandler" msprop:Generator_RowDeletedName="SparePartsViewRowDeleted" msprop:Generator_RowDeletingName="SparePartsViewRowDeleting" msprop:Generator_RowEvArgName="SparePartsViewRowChangeEvent" msprop:Generator_TablePropName="SparePartsView" msprop:Generator_RowChangedName="SparePartsViewRowChanged" msprop:Generator_RowChangingName="SparePartsViewRowChanging" msprop:Generator_TableClassName="SparePartsViewDataTable" msprop:Generator_RowClassName="SparePartsViewRow" msprop:Generator_TableVarName="tableSparePartsView" msprop:Generator_UserTableName="SparePartsView">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_SpareParts" msprop:Generator_ColumnPropNameInRow="ID_SpareParts" msprop:Generator_ColumnPropNameInTable="ID_SparePartsColumn" msprop:Generator_ColumnVarNameInTable="columnID_SpareParts" msprop:Generator_UserColumnName="ID_SpareParts">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TypeSpareParts" msprop:Generator_ColumnPropNameInRow="TypeSpareParts" msprop:Generator_ColumnPropNameInTable="TypeSparePartsColumn" msprop:Generator_ColumnVarNameInTable="columnTypeSpareParts" msprop:Generator_UserColumnName="TypeSpareParts">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Name_SpareParts" msprop:Generator_ColumnPropNameInRow="Name_SpareParts" msprop:Generator_ColumnPropNameInTable="Name_SparePartsColumn" msprop:Generator_ColumnVarNameInTable="columnName_SpareParts" msprop:Generator_UserColumnName="Name_SpareParts">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Description_SpareParts" msprop:Generator_ColumnPropNameInRow="Description_SpareParts" msprop:Generator_ColumnPropNameInTable="Description_SparePartsColumn" msprop:Generator_ColumnVarNameInTable="columnDescription_SpareParts" msprop:Generator_UserColumnName="Description_SpareParts">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Price_SpareParts" msprop:Generator_ColumnPropNameInRow="Price_SpareParts" msprop:Generator_ColumnPropNameInTable="Price_SparePartsColumn" msprop:Generator_ColumnVarNameInTable="columnPrice_SpareParts" msprop:Generator_UserColumnName="Price_SpareParts" type="xs:double" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SparePartsView" />
+      <xs:field xpath="mstns:ID_SpareParts" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

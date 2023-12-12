@@ -1,0 +1,57 @@
+﻿<Application x:Class="Laba7DB2.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Laba7DB2"
+             xmlns:viewModal="clr-namespace:Laba7DB2.MVM.ViewModel"
+             xmlns:view="clr-namespace:Laba7DB2.MVM.View"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+         <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary>
+                    
+                </ResourceDictionary>
+                <ResourceDictionary Source="Themes/TextBoxEmail.xaml"/>
+                <ResourceDictionary Source="Themes/TextBoxPass.xaml"/>
+                <ResourceDictionary Source="Themes/GradientButton.xaml"/>
+                <ResourceDictionary Source="Themes/MainButton.xaml"/>
+                <ResourceDictionary Source="Themes/X.xaml"/>
+                <ResourceDictionary Source="Themes/LineAuth.xaml"/>
+                <ResourceDictionary Source="Themes/Menu.xaml"/>
+                <ResourceDictionary Source="Themes/MenuItem.xaml"/>
+                <ResourceDictionary Source="Themes/ClientMenuItem.xaml"/>
+                <ResourceDictionary Source="Themes/ClientMenu.xaml"/>
+                <ResourceDictionary Source="Themes/ViewMWorkerText.xaml"/>
+                <ResourceDictionary Source="Themes/ADD_Worker.xaml"/>
+                <ResourceDictionary Source="Themes/ADD_Worker2.xaml"/>
+                <ResourceDictionary Source="Themes/LineControlWorker.xaml"/>
+                <ResourceDictionary Source="Themes/LabelOrders.xaml"/>
+                <ResourceDictionary Source="Themes/TextBoxOrders.xaml"/>
+                <ResourceDictionary Source="Themes/OrdersGradientButoon.xaml"/>
+                <ResourceDictionary Source="Themes/RegLabel.xaml"/>
+                <ResourceDictionary Source="Themes/RegTextBox.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+
+            <DataTemplate DataType="{x:Type viewModal:EmptyWindowModel}">
+                <view:EmptyWindow/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModal:ControlModel}">
+                <view:ControlsWorker/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModal:OrderModel}">
+                <view:Order/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModal:ViewMModal}">
+                <view:ViewM/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModal:RepairViewModel}">
+                <view:Repair/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModal:ReportViewM}">
+                <view:Report/>
+            </DataTemplate>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

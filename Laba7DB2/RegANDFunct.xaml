@@ -1,0 +1,523 @@
+﻿<Window x:Class="Laba7DB2.RegANDFunct"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Laba7DB2"
+        mc:Ignorable="d"
+        Title="RegANDFunct" Height="600" Width="1000"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        AllowsTransparency="True" 
+        WindowStartupLocation="CenterScreen" 
+        MouseDown="Window_MouseDown">
+    <Border 
+            CornerRadius="20">
+        <Border.Background>
+            <ImageBrush ImageSource="/Images/BackgroungMainW1.png"/>
+        </Border.Background>
+        <Grid Grid.ColumnSpan="2" 
+              Grid.RowSpan="2"
+              Name="GridVis"
+              >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="31*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+
+            <Image Source="/Ico/shield.png"
+                    Margin="-2,-6,3,38" 
+                    Grid.RowSpan="2"
+                    Stretch="Fill"
+                   
+                   />
+
+            <Label Content="Реєстрація"
+                    Grid.Column="1"
+                    Foreground="White"
+                    FontSize="20"
+                    FontWeight="Bold"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    x:Name="CentrText"
+                />
+            <Button Content="X"
+                    Grid.Column="1"
+                    Name="xxx"
+                    Style="{StaticResource X}"
+                    Margin="836,10,10,20" 
+                        Click="X_Click" 
+                    Width="NaN"                 
+                    />
+
+
+            <Image Source="/Images/Panel.png"
+                   Grid.Row="1"
+                   Grid.RowSpan="11"
+                   Grid.Column="1"
+                   Stretch="Fill"
+                   />
+
+            <!--Додавання-->
+            <Label Content="Ім'я"
+                   Style="{StaticResource regclient}"
+                   Grid.Row="1"
+                   Grid.Column="1"
+                   Name="NameLabelClient"
+                   Visibility="Collapsed"/>
+            <TextBox
+                Name="NameClient"
+                Grid.Column="1"
+                Grid.Row="1"
+                Style="{StaticResource regclienttextbox}"
+                Visibility="Collapsed" 
+                Margin="260,20,175,0"/>
+            <Line Grid.Row="1" 
+                  Grid.Column="1"
+                  Margin="0 65 0 0"
+                  Style="{StaticResource LinContol}"
+                  Name="NameLineClient"
+                  Visibility="Collapsed"
+                />
+
+            <Label Content="Прізвище"
+                   Style="{StaticResource regclient}"
+                   Grid.Row="2"
+                   Grid.Column="1"
+                   Name="SurnmaeLabelClient"
+                   Visibility="Collapsed"/>
+            <TextBox
+                Name="SurnameClient"
+                Grid.Column="1"
+                Grid.Row="2"
+                Style="{StaticResource regclienttextbox}"
+                Visibility="Collapsed"
+                Margin="260,20,175,0"/>
+            <Line Grid.Row="2" 
+                  Grid.Column="1"
+                  Margin="0 65 0 0"
+                  Style="{StaticResource LinContol}"
+                  Name="SurnameLineClient"
+                  Visibility="Collapsed"
+                />
+
+            <Label Content="Побатькові"
+                   Style="{StaticResource regclient}"
+                   Grid.Row="3"
+                   Grid.Column="1"
+                   Name="MiddleNameLabelClient"
+                   Visibility="Collapsed"/>
+            <TextBox
+                Name="MiddleNameClient"
+                Grid.Column="1"
+                Grid.Row="3"
+                Style="{StaticResource regclienttextbox}"
+                Visibility="Collapsed"
+                Margin="260,20,175,0"/>
+            <Line Grid.Row="3" 
+                  Grid.Column="1"
+                  Margin="0 65 0 0"
+                  Style="{StaticResource LinContol}"
+                  Name="MiddleNameLineClient"
+                  Visibility="Collapsed"
+                />
+
+            <Label Content="Email"
+                   Style="{StaticResource regclient}"
+                   Grid.Row="4"
+                   Grid.Column="1"
+                   Name="EmailLabelClient"
+                   Visibility="Collapsed"
+                   />
+            <TextBox
+                Name="EmailClient"
+                Grid.Column="1"
+                Grid.Row="4"
+                Style="{StaticResource regclienttextbox}"
+                Visibility="Collapsed"
+                Margin="260,20,175,0"/>
+            <Line Grid.Row="4" 
+                  Grid.Column="1"
+                  Margin="0 65 0 0"
+                  Style="{StaticResource LinContol}"
+                  Name="EmailLineClient"
+                  Visibility="Collapsed"
+                />
+
+            <Label Content="Телефон"
+                   Style="{StaticResource regclient}"
+                   Grid.Row="5"
+                   Grid.Column="1"
+                   Name="PhoneLabelClient"
+                   Visibility="Collapsed"
+                   />
+            <TextBox
+                Name="PhoneClient"
+                Grid.Column="1"
+                Grid.Row="5"
+                Style="{StaticResource regclienttextbox}"
+                Visibility="Collapsed"
+                Margin="260,20,175,0"/>
+            <Line Grid.Row="5" 
+                  Grid.Column="1"
+                  Margin="0 65 0 0"
+                  Style="{StaticResource LinContol}"
+                  Name="PhoneLineClient"
+                  Visibility="Collapsed"
+                />
+
+            <Label Content="Адреса"
+                   Style="{StaticResource regclient}"
+                   Grid.Row="6"
+                   Grid.Column="1"
+                   Name="AdressLabelClient"
+                   Visibility="Collapsed"
+                   />
+            <TextBox
+                Name="AdressClient"
+                Grid.Column="1"
+                Grid.Row="6"
+                Style="{StaticResource regclienttextbox}"
+                Visibility="Collapsed"
+                Margin="260,20,175,0"/>
+            <Line Grid.Row="6" 
+                  Grid.Column="1"
+                  Margin="0 65 0 0"
+                  Style="{StaticResource LinContol}"
+                  Name="AdressLineClient"
+                  Visibility="Collapsed"
+                />
+
+            <Button
+                Content="Додати"
+                Grid.Column="1"
+                Grid.Row="7"
+                Name="ButtonOrder"
+                Style="{StaticResource GradientButton}" 
+                Visibility="Collapsed"
+                Click="ButtonAddClient_Click "/>
+
+
+
+            <StackPanel Grid.Row="1"
+                        Grid.RowSpan="7"
+                        >
+                <Button
+                    Margin="0 20 0 0"
+                    Grid.Row="1" 
+                    Content="Перегляд"
+                    Style="{StaticResource MainButton}" 
+                    x:Name="ViewBtn" 
+                    Click="ViewBtn_Click"
+                />
+                <Button
+                    Margin="0 20 0 0"
+                    Grid.Row="1" 
+                    Content="Замовлення"
+                    Style="{StaticResource MainButton}"
+                    x:Name="OrderBtn" 
+                    Click="OrderBtn_Click"
+                />
+                <Button
+                    Margin="0 20 0 0"
+                    Grid.Row="1" 
+                    Content="Відгук"
+                    Style="{StaticResource MainButton}" 
+                    x:Name="FeedbackBtn" 
+                    Click="FeedbackBtn_Click"
+                />
+                <Button
+                    Margin="0 350 0 0"
+                    Grid.Row="1" 
+                    Content="Вихід"
+                    Name="Exit"
+                    Style="{StaticResource MainButton}" 
+                    Click="Exit_Click"
+                />
+            </StackPanel>
+
+            <DataGrid Grid.Row="1"
+                      Grid.Column="1"
+                      x:Name="OrderDB"
+                      AutoGenerateColumns="False"
+                      Visibility="Collapsed">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID" Width="50" Binding="{Binding ID_Orders}"/>
+                    <DataGridTextColumn Header="ID категорії проблеми" Width="*" Binding="{Binding Surname_Client}"/>
+                    <DataGridTextColumn Header="ID запчастини" Width="*" Binding="{Binding Name_Client}"/>
+                    <DataGridTextColumn Header="ID працівника" Width="*" Binding="{Binding Middlename_Client}"/>
+                    <DataGridTextColumn Header="Дата початку ремонту" Width="*" Binding="{Binding Name_ServiceServic}"/>
+                    <DataGridTextColumn Header="Дата кінця ремонту" Width="*" Binding="{Binding Date_Orders}"/>
+                    <DataGridTextColumn Header="Опис" Width="*" Binding="{Binding Description_Orders}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <!--Клієнт-->
+            <Label Content="Клієнт"
+                   Style="{StaticResource LabelOrders}" 
+                   Margin="225,0,0,0"
+                   Grid.Row="1"
+                   Grid.Column="1"
+                   Name="LabelClient"
+                   Visibility="Collapsed"/>
+
+            <ComboBox
+                Width="300"
+                Height="20" 
+                Margin="310,20,250,20"
+                Name="ClientComboBox" 
+                Grid.Row="1"
+                Grid.Column="1"
+                Visibility="Collapsed"
+                />
+
+            <Line Style="{StaticResource LinContol}"
+                  Margin="0 50 0 0"
+                  Grid.Row="1"
+                  Grid.Column="1"
+                  Name="LineOrders"
+                  Visibility="Collapsed"/>
+
+            <!--Послуги-->
+            <Label Content="Послуги"
+                   Style="{StaticResource LabelOrders}" 
+                   Margin="225,0,0,0"
+                   Grid.Row="2"
+                   Grid.Column="1"
+                   Name="LabelSevice"
+                   Visibility="Collapsed"/>
+
+            <ComboBox
+                Width="300"
+                Height="20" 
+                Margin="310,20,250,20"
+                Grid.Row="2"
+                Grid.Column="1"
+                Name="ServicesComboBox" 
+                Visibility="Collapsed"
+                >
+            </ComboBox>
+
+            <Line Style="{StaticResource LinContol}"
+                  Margin="0 50 0 0"
+                  Grid.Row="2"
+                  Grid.Column="1"
+                  Name="LineService"
+                  Visibility="Collapsed"/>
+
+            <!--Дата-->
+            <Label Content="Дата"
+                   Style="{StaticResource LabelOrders}" 
+                   Margin="225,0,0,0"
+                   Grid.Row="3"
+                   Grid.Column="1"
+                   Name="DateOrders"
+                   Visibility="Collapsed"/>
+
+            <Label
+                Content=""
+                Style="{StaticResource LabelOrders}"
+                HorizontalAlignment="Center"
+                Grid.Row="3"
+                Grid.Column="1"
+                Width="300"
+                Name="DateNow"
+                Visibility="Collapsed" Loaded="DateNow_Loaded"
+                />
+
+            <Line Style="{StaticResource LinContol}"
+                  Margin="0 50 0 0"
+                  Grid.Row="3"
+                  Grid.Column="1"
+                  Name="DateLine"
+                  Visibility="Collapsed"/>
+
+            <!--Опис-->
+            <Label Content="Опис"
+                   Style="{StaticResource LabelOrders}" 
+                   HorizontalAlignment="Center"
+                   Margin="0"
+                   Grid.Row="4"
+                   Grid.Column="1"
+                   Name="LabelDesc"
+                   Visibility="Collapsed"/>
+
+            <TextBox
+                Grid.Row="5"
+                Grid.Column="1"
+                Grid.RowSpan="3"
+                Style="{StaticResource TextBoxOrders}"
+                Text=""
+                TextWrapping="Wrap"
+                Name="TextBoxOrders"
+                Margin="0 -80 0 0"
+                Visibility="Collapsed"/>
+
+            <Button
+                Content="Оформити"
+                Margin="0 10 0 0"
+                Grid.Row="7"
+                Grid.Column="1"
+                Style="{StaticResource OrdersGradientButton}" 
+                Height="44"
+                Name="EnterOrders"
+                Visibility="Collapsed" Click="EnterOrders_Click"/>
+
+            <!--Відгук-->
+
+            <Label Content="Замовлення"
+                   Style="{StaticResource TextAddWorker}"
+                   Grid.Column="1"
+                   Name="FeedbackLabel"
+                   Visibility="Collapsed" Margin="216,0,535,42" Grid.Row="1"
+                   />
+
+            <ComboBox
+                Name="FeedbackCombobox"
+                Grid.Row="1"
+                Grid.Column="1"
+                Height="25"
+                Visibility="Collapsed" 
+                Margin="361,4,200,46" 
+                Loaded="FeedbackCombobox_Loaded"
+                
+                />
+
+
+            <Label Content="Дата оцінювання"
+                   Style="{StaticResource TextAddWorker}"
+                   Grid.Row="1"
+                   Grid.Column="1"
+                   Name="DateFeedbeckLabel"
+                   Margin="200,35,0,0"
+                   Visibility="Collapsed"
+                   />
+
+            <Label
+                Name="DateFeedbeckTextBox"
+                Grid.Row="1"
+                Grid.Column="1"
+                Style="{StaticResource LabelOrders}"
+                Visibility="Collapsed"
+                Margin="361,37,220,0" VerticalAlignment="Top" 
+                Loaded="DateFeedbeckTextBox_Loaded"
+                
+                />
+
+            <Line Grid.Row="1" 
+                  Grid.Column="1"
+                  Margin="0 70 0 0"
+                  Style="{StaticResource LinContol}"
+                  Name="DateFeedbeckLine"
+                  Visibility="Collapsed"
+                />
+
+
+            <Label Content="Оцінка[0-10]"
+                   Style="{StaticResource TextAddWorker}"
+                   Grid.Row="2"
+                   Grid.Column="1"
+                   Name="EvaluationLabel"
+                   Margin="200,35,0,0"
+                   Visibility="Collapsed"/>
+
+            <TextBox
+                Name="EvaluationTextBox"
+                Grid.Column="1"
+                Grid.Row="2"
+                Style="{StaticResource TextBoxAddWorker}"
+                Visibility="Collapsed"
+                Margin="310,30,220,0"
+                />
+
+            <Line Grid.Row="2" 
+                  Grid.Column="1"
+                  Margin="0 70 0 0"
+                  Style="{StaticResource LinContol}"
+                  Name="EvaluationLine"
+                  Visibility="Collapsed"
+                />
+
+            <Label Content="Відгук"
+                   Style="{StaticResource TextAddWorker}"
+                   Grid.Row="3"
+                   Grid.Column="1"
+                   Name="CommentsLabel"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   Visibility="Collapsed"
+                   Margin="0,35,0,0"
+                   />
+
+            <Line Grid.Row="3" 
+                  Grid.Column="1"
+                  Margin="0 70 0 0"
+                  Style="{StaticResource LinContol}"
+                  Name="CommentsLine"
+                  Visibility="Collapsed"
+                />
+
+            <TextBox
+                Grid.Row="4"
+                Grid.RowSpan="3"
+                Grid.Column="1"
+                Style="{StaticResource TextBoxOrders}"
+                Height="130"
+                Text=""
+                TextWrapping="Wrap"
+                Name="CommentsTextBox"
+                Visibility="Collapsed"/>
+
+            <Label Content="Клієнт"
+                   Style="{StaticResource TextAddWorker}"
+                   Grid.Row="6"
+                   Grid.Column="1"
+                   Name="ClientFeedbackLabel"
+                   Margin="200,35,0,0"
+                   Visibility="Collapsed"
+                   />
+
+            <ComboBox
+                Name="ClientFeedbackComboBox"
+                Grid.Row="6"
+                Grid.Column="1"
+                Height="25"
+                Visibility="Collapsed" 
+                Margin="310,30,220,0" 
+                Loaded="ClientFeedbackComboBox_Loaded"
+                />
+
+            <Line Grid.Row="6" 
+                  Grid.Column="1"
+                  Margin="0 70 0 0"
+                  Style="{StaticResource LinContol}"
+                  Name="ClientFeedbackLine"
+                  Visibility="Collapsed"
+                />
+
+            <Button
+                Content="Відправити відгук"
+                Grid.Column="1"
+                Grid.Row="7"
+                Name="ButtonAddFeedback"
+                Style="{StaticResource GradientButton}" 
+                Visibility="Collapsed" 
+                Click="ButtonAddFeedback_Click"
+                
+                />
+
+        </Grid>
+    </Border>
+</Window>

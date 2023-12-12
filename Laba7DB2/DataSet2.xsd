@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet2" targetNamespace="http://tempuri.org/DataSet2.xsd" xmlns:mstns="http://tempuri.org/DataSet2.xsd" xmlns="http://tempuri.org/DataSet2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ComputerServiceCenterConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ComputerServiceCenterConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Laba7DB2.Properties.Settings.GlobalReference.Default.ComputerServiceCenterConnectionString1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="JobEvaluationViewTableAdapter" GeneratorDataComponentClassName="JobEvaluationViewTableAdapter" Name="JobEvaluationView" UserDataComponentName="JobEvaluationViewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ComputerServiceCenterConnectionString1 (Settings)" DbObjectName="ComputerServiceCenter.dbo.JobEvaluationView" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID_JobEvaluation, EvaluationWork, Comments_JobEvaluation, Date_Feedback FROM dbo.JobEvaluationView</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID_JobEvaluation" DataSetColumn="ID_JobEvaluation" />
+              <Mapping SourceColumn="EvaluationWork" DataSetColumn="EvaluationWork" />
+              <Mapping SourceColumn="Comments_JobEvaluation" DataSetColumn="Comments_JobEvaluation" />
+              <Mapping SourceColumn="Date_Feedback" DataSetColumn="Date_Feedback" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="DataSet2" msprop:Generator_DataSetName="DataSet2">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="JobEvaluationView" msprop:Generator_RowEvHandlerName="JobEvaluationViewRowChangeEventHandler" msprop:Generator_RowDeletedName="JobEvaluationViewRowDeleted" msprop:Generator_RowDeletingName="JobEvaluationViewRowDeleting" msprop:Generator_RowEvArgName="JobEvaluationViewRowChangeEvent" msprop:Generator_TablePropName="JobEvaluationView" msprop:Generator_RowChangedName="JobEvaluationViewRowChanged" msprop:Generator_RowChangingName="JobEvaluationViewRowChanging" msprop:Generator_TableClassName="JobEvaluationViewDataTable" msprop:Generator_RowClassName="JobEvaluationViewRow" msprop:Generator_TableVarName="tableJobEvaluationView" msprop:Generator_UserTableName="JobEvaluationView">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_JobEvaluation" msprop:Generator_ColumnPropNameInRow="ID_JobEvaluation" msprop:Generator_ColumnPropNameInTable="ID_JobEvaluationColumn" msprop:Generator_ColumnVarNameInTable="columnID_JobEvaluation" msprop:Generator_UserColumnName="ID_JobEvaluation">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EvaluationWork" msprop:Generator_ColumnPropNameInRow="EvaluationWork" msprop:Generator_ColumnPropNameInTable="EvaluationWorkColumn" msprop:Generator_ColumnVarNameInTable="columnEvaluationWork" msprop:Generator_UserColumnName="EvaluationWork">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Comments_JobEvaluation" msprop:Generator_ColumnPropNameInRow="Comments_JobEvaluation" msprop:Generator_ColumnPropNameInTable="Comments_JobEvaluationColumn" msprop:Generator_ColumnVarNameInTable="columnComments_JobEvaluation" msprop:Generator_UserColumnName="Comments_JobEvaluation">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Date_Feedback" msprop:Generator_ColumnPropNameInRow="Date_Feedback" msprop:Generator_ColumnPropNameInTable="Date_FeedbackColumn" msprop:Generator_ColumnVarNameInTable="columnDate_Feedback" msprop:Generator_UserColumnName="Date_Feedback" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:JobEvaluationView" />
+      <xs:field xpath="mstns:ID_JobEvaluation" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
